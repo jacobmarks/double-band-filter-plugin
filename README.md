@@ -1,5 +1,7 @@
 ## Double Band Filter Plugin
 
+![match_either_band](https://github.com/jacobmarks/double-band-filter-plugin/assets/12500356/5e51740b-f528-40ea-acb1-f66358b69aaa)
+
 This plugin provides an operator to filter a float-valued field on two ranges
 simultaneously.
 
