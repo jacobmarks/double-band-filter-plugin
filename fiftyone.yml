@@ -1,0 +1,8 @@
+fiftyone:
+  version: ">=0.22.0"
+name: "@jacobmarks/double_band_filter"
+version: "1.0.0"
+description: "Filter a float-valued field on two ranges simultaneously"
+url: "https://github.com/jacobmarks/double-band-filter-plugin"
+operators:
+  - match_either_band
