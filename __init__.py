@@ -20,11 +20,7 @@ def serialize_view(view):
 
 
 def _get_float_fields(dataset):
-    keys = []
-    for k, v in dataset.get_field_schema().items():
-        if str(type(v).__name__) == "FloatField":
-            keys.append(k)
-    return keys
+    return list(dataset.get_field_schema(ftype=fo.FloatField).keys())
 
 
 def _filter_view(view, left_min, left_max, right_min, right_max, field):
