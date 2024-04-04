@@ -5,18 +5,10 @@ simultaneously.
 |
 """
 
-import json
-
-from bson import json_util
-
 import fiftyone as fo
 import fiftyone.operators as foo
 from fiftyone.operators import types
 from fiftyone import ViewField as F
-
-
-def serialize_view(view):
-    return json.loads(json_util.dumps(view._serialize()))
 
 
 def _get_float_fields(dataset):
@@ -174,10 +166,7 @@ class MatchEitherBand(foo.Operator):
         view = _filter_view(
             ctx.view, left_min, left_max, right_min, right_max, field
         )
-        ctx.trigger(
-            "set_view",
-            params=dict(view=serialize_view(view)),
-        )
+        ctx.ops.set_view(view=view)
 
 
 def register(plugin):
